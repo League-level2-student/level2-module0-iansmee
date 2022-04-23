@@ -10,14 +10,29 @@ public static void main(String[] args) {
 	Robot robots [] = new Robot [5];
 	for (int i = 0; i < robots.length; i++) {
 		robots[i] = new Robot();
-		robots[i].moveTo(100*i +200, 600);
+		robots[i].moveTo(500, 300);
 		robots[i].setSpeed(100);
 	}	
 		
 		
 		boolean isRacing =true;
 		while (isRacing) {
+			int ran = new Random().nextInt(250);
 			for (int j = 0; j < robots.length; j++) {
+				
+				for (int p = 0; p < ran; p++) {
+					robots[j].move(5);
+					robots[j].turn(5);
+					if(robots[j].getY()==300 && robots[j].getX()==500) {
+						isRacing = false;
+					}
+				}
+				
+				
+				
+				
+				
+				
 			robots[j].move(new Random().nextInt(50));
 		if(robots[j].getY()<=1) {
 				isRacing = false;
