@@ -45,8 +45,9 @@ import processing.core.PImage;
  * 11.EXTRA: Find more paintings and add them to your code.
  *           Watercolor paintings work the best!
  */
-
+ 
 public class _03_VanGogh extends PApplet {
+	PImage [] images;
     PImage canvas;
     PImage paintbrushCursor;
     boolean initializeCanvas = true;
@@ -57,7 +58,9 @@ public class _03_VanGogh extends PApplet {
     Brush brush;
     
     void initializePaintings() {
+        PImage images [] = new PImage [4];
         
+         
     }
     
     void selectNextPainting() {
